@@ -59,6 +59,7 @@ sand_minerals_density <- sites %>% left_join(density)
 
 sand_minerals_density %>% 
   left_join(solubility_hardness)
+sand_mineral_properties <- sand_minerals_density
 ```
 There are 23 rows and 3 variables. It is not the same as the san_minerals data set. 
 ### Exercise 4
