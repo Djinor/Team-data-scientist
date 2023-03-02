@@ -57,17 +57,40 @@ The rows in the density.csv dataset describes the density of each mineral type.
 ```{r join-mineral-properties}
 sand_minerals_density <- sites %>% left_join(density)
 
-sand_minerals_density %>% 
+sand_mineral_properties <- sand_minerals_density %>% 
   left_join(solubility_hardness)
-sand_mineral_properties <- sand_minerals_density
+
 ```
-There are 23 rows and 3 variables. It is not the same as the san_minerals data set. 
+There are 23 rows and 3 variables. It is the same as the sand_minerals data set. 
 ### Exercise 4
 
-Remove this text, and add your answer for Exercise 4 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r sand-per-location}
+sand_mineral_properties %>% count(location)
+```
+
+```{r slice-sand}
+sand_mineral_properties %>% slice_tail(n = 10)
+```
+
+```{r sand-density}
+sand_mineral_properties %>%
+  arrange(desc(density)) %>%
+  slice_tail(n = 10)
+```
+
+```{r select-sand}
+sand_mineral_properties %>%
+  select(1,5) %>%
+  slice_tail(n = 5)
+```
+
+```{r remove-hardness-NA}
+sand_mineral_properties %>%
+  filter(is.na(hardness) != TRUE) %>%
+  arrange(desc(density)) %>%
+  slice_head(n = 5)
+```
+
 
 ### Exercise 5
 
