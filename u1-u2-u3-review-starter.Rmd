@@ -27,6 +27,9 @@ glimpse(sites)
 
 ```
 There are 23 rows and 2 variables.
+
+Each row represents a mineral type found at a particular location.
+
 ### Exercise 2
 
 Remove this text, and add your answer for Exercise 2 here.
