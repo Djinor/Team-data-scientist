@@ -27,12 +27,10 @@ Remove this text, and add your answer for Exercise 1 here.
 Add code chunks as needed.
 Don't forget to label your code chunk.
 Do not use spaces in code chunk labels.
-```{r}
-glimpse(sites)
-=======
-```{r inspect-sand-minerals}
 
->>>>>>> a60afa08fb2353a1608dccd7c3e14a9a91e0763d
+```{r inspect-sand-minerals}
+glimpse(sites)
+
 ```
 
 ### Exercise 2
