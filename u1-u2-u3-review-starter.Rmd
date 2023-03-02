@@ -43,6 +43,12 @@ glimpse(solubility_hardness)
 There are 3 rows and 2 variables in the density data.
 There are 10 rows and 2 variables in the location_descriptions data.
 There are 3 rows and 3 variables in the solubility_hardness data.
+
+The rows in Solubility_hardness.csv dataset describes the degree of solubility and range of hardness of each mineral.
+
+The rows in the location_descriptions.csv dataset describes the condition of the location where each mineral was found.
+
+The rows in the density.csv dataset describes the density of each mineral type.
 ### Exercise 3
 
 Remove this text, and add your answer for Exercise 3 here.
