@@ -55,7 +55,7 @@ The rows in the density.csv dataset describes the density of each mineral type.
 ### Exercise 3
 
 ```{r join-mineral-properties}
-
+left_join(sand_minerals, density)
 ```
 
 ### Exercise 4
