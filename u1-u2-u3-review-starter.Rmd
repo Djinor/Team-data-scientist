@@ -35,6 +35,9 @@ Each row represents a mineral type found at a particular location.
 ### Exercise 2
 
 ```{r inspect-other-dataframes}
+glimpse(density)
+glimpse(location_descriptions)
+glimpse(solubility_hardness)
 
 ```
 
