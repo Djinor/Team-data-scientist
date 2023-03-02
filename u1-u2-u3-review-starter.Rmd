@@ -39,6 +39,9 @@ glimpse(density)
 glimpse(location_descriptions)
 glimpse(solubility_hardness)
 
+names(density)
+names(location_descriptions)
+names(solubility_hardness)
 ```
 There are 3 rows and 2 variables in the density data.
 There are 10 rows and 2 variables in the location_descriptions data.
