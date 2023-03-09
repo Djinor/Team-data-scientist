@@ -148,7 +148,20 @@ Do not use spaces in code chunk labels.
 
 ### Exercise 9
 
-Remove this text, and add your answer for Exercise 6 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+
+```{r homeworld-barplot, fig.height=10, fig.width=10}
+starwars %>%
+  filter(is.na(gender)==FALSE ) %>% 
+  ggplot(aes(x = gender, color = gender)) +
+  geom_bar( position = "stack") +
+  labs(
+    title = "Homeworld-Barplot",
+    x = "Gender",
+    y = "Count"
+  ) +
+ facet_wrap(~homeworld)
+  
+```
+
+There are few homeworld that have both genders with the masculine gender having higher number of characters than the feminine gender. There are homeworld with only female characters and others with male character.
+In conclusion, there more masculine homworld than feminine
