@@ -113,6 +113,7 @@ sand_mineral_properties %>%
   summarize(mean_density= mean(density))
   
 ```
+
 ```{r density group by location}
 sand_mineral_properties %>%
   group_by(location) %>% 
@@ -123,10 +124,21 @@ sand_mineral_properties %>%
 
 ### Exercise 6
 
-Remove this text, and add your answer for Exercise 6 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r sand_minerals}
+sites %>% 
+  pivot_wider(names_from = minerals, values_from = location)
+```
+
+```{r sand_minerals 2}
+sites %>% 
+  pivot_longer(names_to = "locations", values_to = "number", cols = 1,2)
+```
+
+```{r sand_mineral_density}
+sand_minerals_density %>% 
+  pivot_wider(names_from = minerals, values_from = density)
+```
+
 
 ## Part II - Data Visualization
 
@@ -134,17 +146,31 @@ Do not use spaces in code chunk labels.
 
 ### Exercise 7
 
-Remove this text, and add your answer for Exercise 6 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r starwars-heights}
+starwars %>% 
+  ggplot(aes(x= height, fill= species))+
+  geom_histogram()+
+  labs(title= "Star Wars Character Heights", x= "Heights", y= "Years")+
+  facet_wrap(~ species)+
+  theme_bw()
+
+```
+Humans have the highest variability to their heights compared to the other Star Wars species. 
+
 
 ### Exercise 8
 
-Remove this text, and add your answer for Exercise 6 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r weight-vs-height,warning=FALSE}
+starwars %>%
+  filter(mass <= 1000) %>%
+  ggplot(aes(height, mass)) +
+  geom_point() +
+  labs(x = "Height", y = "Mass", title = "Mass vs. Height of Star Wars characters") +
+  geom_smooth() +
+  facet_wrap(~homeworld)
+  
+```
+
 
 ### Exercise 9
 
